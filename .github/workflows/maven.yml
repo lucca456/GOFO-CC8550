@@ -1,0 +1,32 @@
+name: Java CI with Maven
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          path: 'GOFO Implementation'
+    
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Build with Maven
+        run: mvn -B package --file 'GOFO Implementation/pom.xml'
+        working-directory: 'GOFO Implementation'
+
+      - name: Run Tests with Maven
+        run: mvn test --file 'GOFO Implementation/pom.xml'
+        working-directory: 'GOFO Implementation'
