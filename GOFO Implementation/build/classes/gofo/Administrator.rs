@@ -1,2 +1,0 @@
-GOFO.Administrator
-SE.Administrator

@@ -1,2 +1,0 @@
-GOFO.Player
-SE.Player

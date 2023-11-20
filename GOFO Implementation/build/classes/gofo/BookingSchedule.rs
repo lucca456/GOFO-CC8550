@@ -1,2 +1,0 @@
-SE.BookingSchedule
-GOFO.BookingSchedule

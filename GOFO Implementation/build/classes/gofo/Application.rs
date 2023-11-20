@@ -1,2 +1,0 @@
-GOFO.Application
-SE.Application
